@@ -1,11 +1,11 @@
-/*Krzysztof Kobyliñski
+/*Krzysztof KobyliÃ±ski
 Projekt 1.10. na PROI*/
 
 #include <iostream>
 #include "test.h"
 #include "vector.h"
 #include <cstdlib>
-#include <conio.h>
+//#include <conio.h>
 #include <stdio.h>
 
 using namespace std;
@@ -37,7 +37,7 @@ int funkcja_testujaca()
 
     Vec a(wymiar1), b(wymiar2),c;
 
-    system("cls");
+    //system("cls");
 
     char wybor;
     int nr_wektora,i;
@@ -60,7 +60,7 @@ int funkcja_testujaca()
 
 
     cout << endl;
-    wybor=getch();
+    cin >> wybor;
 
     switch(wybor)
     {
@@ -180,7 +180,7 @@ int funkcja_testujaca()
 
     cout<<"Gotowe"<<endl;
     getchar();getchar();
-    system("cls");
+   // system("cls");
 }
 
 }
