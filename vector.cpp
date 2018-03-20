@@ -84,7 +84,7 @@ void Vec::operator+=(Vec const &v)
     else
         {
         cerr<<"Nie mozna dodac wektorow, poniewaz maja rozne wymiary"<<endl;
-        exit (EXIT_FAILURE);
+        //exit (EXIT_FAILURE);
         }
 }
 
@@ -98,16 +98,17 @@ Vec Vec::operator-(Vec  const &v)
     {
         temp.tab[i]=tab[i]-v.tab[i];
     }
+    return temp;
     }
 
     else
     {
         cerr<<"Nie mozna odjac wektorow, poniewaz maja rozne wymiary"<<endl;
-        exit (EXIT_FAILURE);
+        //exit (EXIT_FAILURE);
     }
 
 
-    return temp;
+
 }
 
 void Vec::operator-=(Vec const &v)
@@ -122,7 +123,7 @@ void Vec::operator-=(Vec const &v)
     else
         {
         cerr<<"Nie mozna odjac wektorow, poniewaz maja rozne wymiary"<<endl;
-        exit (EXIT_FAILURE);
+        //exit (EXIT_FAILURE);
         }
 }
 
@@ -131,19 +132,21 @@ double Vec::operator*(Vec const &v)
     double temp=0;
 
     if(n==v.n)
-
+    {
     for(int i=0;i<n;i++)
     {
         temp+=v.tab[i]*tab[i];
+    }
+    return temp;
     }
 
     else
     {
          cerr<<"Nie mozna policzyc iloczynu skalarnego, poniewaz wektory maja rozne wymiary"<<endl;
-        exit (EXIT_FAILURE);
+        //exit (EXIT_FAILURE);
     }
 
-    return temp;
+
 }
 
 bool Vec::operator==(Vec const &v)

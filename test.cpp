@@ -10,7 +10,7 @@ Projekt 1.10. na PROI*/
 
 using namespace std;
 
-void funkcja_testujaca()
+int funkcja_testujaca()
 {
     int wymiar1, wymiar2;
     cout<<"Podaj wymiary obu wektorow"<<endl;
@@ -129,12 +129,12 @@ void funkcja_testujaca()
             if(i==1)
                 {
                     c=a-b;
-                    cout<<c<<endl;
+                    if(wymiar1==wymiar2) cout<<c<<endl;
                 }
             else if(i==2)
                 {
                     c=b-a;
-                    cout<<c<<endl;
+                    if(wymiar1==wymiar2) cout<<c<<endl;
                 }
             else if(i==3)
                 a-=b;
@@ -144,7 +144,7 @@ void funkcja_testujaca()
 
     case '7':
             iloczyn=a*b;
-            cout<<iloczyn<<endl;
+            if(wymiar1==wymiar2) cout<<iloczyn<<endl;
     break;
 
     case '8':
@@ -152,21 +152,33 @@ void funkcja_testujaca()
             cin>>i;
             if(i==1)
                 {
-                    cout<<(a==b)<<endl;
+                    if(a==b)
+                    {
+                         cout<<"Wektory sa takie same"<<endl;
+                    }
+                    else
+                         cout<<"Wektory sa rozne"<<endl;
                 }
             else if(i==2)
                 {
-                    cout<<(a!=b)<<endl;
+                    if(a!=b)
+                    {
+                         cout<<"Wektory sa rozne"<<endl;
+                    }
+                    else
+                         cout<<"Wektory sa takie same"<<endl;
                 }
 
     break;
 
     case '9':
-             exit(0);
+             return 1;;
     break;
 
     default: cout<<"Nie ma takiej opcji w menu!";
     }
+
+    cout<<"Gotowe"<<endl;
     getchar();getchar();
     system("cls");
 }

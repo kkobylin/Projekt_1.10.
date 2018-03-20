@@ -6,9 +6,8 @@ Projekt 1.10. na PROI*/
 
 #include <iostream>
 
-using namespace std;
 
-void funkcja_testujaca();
+int funkcja_testujaca();
 
 
 #endif
